@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:background="@color/TransparentFull"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:padding="9dp"
+        android:background="@drawable/success_box_bg_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/successemo" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/success_box_bg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:textSize="15dp"
+            android:textColor="@color/droidGreen"
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order placed successfully."
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_regular"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <LinearLayout
+            android:id="@+id/tidLay"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:textColor="@color/colorBlack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Transaction Id "
+                android:textColor="@color/colorGreyDisabled"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tid"
+                android:textSize="12dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/colorBlack"
+                android:text="0123456"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/oidLay"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:textColor="@color/colorBlack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Order Id "
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorGreyDisabled"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/oid"
+                android:textSize="12dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/colorBlack"
+                android:text="0123456"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:textColor="@color/colorBlack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp">
+
+            <TextView
+                android:textSize="12dp"
+                android:textColor="@color/colorGreyDisabled"
+                android:text="Order Amount "
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/orderAmt"
+                android:textSize="12dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/colorBlack"
+                android:text="Rs. 100"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="14dp"
+            android:background="@color/colorGrey"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:padding="3dp"
+            android:weightSum="2.1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/buttonCancel"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/rect_curved_corner_green_border_white_filled"
+                android:text="Cancel"
+                android:textColor="@color/colorPrimary" />
+
+            <View
+                android:visibility="gone"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/buttonOk"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/rect_curved_corner_green_border_white_filled"
+                android:text="Ok"
+                android:textColor="@color/colorBlack" >
+
+                <ImageView
+                    android:src="@drawable/ic_success"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

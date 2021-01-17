@@ -1,0 +1,240 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:background="@drawable/bg_2"
+        android:focusableInTouchMode="true"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/titleJoin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="52dp"
+            android:gravity="center"
+            android:text="Join"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/colorBlack"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.15"
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/rect_login_field_bg_green"
+            android:gravity="center|left"
+            android:hint="Name"
+            android:fontFamily="@font/poppins_medium"
+            android:imeOptions="actionNext|flagNoExtractUi"
+            android:inputType="textPersonName"
+            android:padding="6dp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/rect_login_field_bg_green"
+            android:gravity="center|left"
+            android:hint="Email"
+            android:fontFamily="@font/poppins_medium"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:padding="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <!--        <EditText-->
+        <!--            android:layout_marginBottom="24dp"-->
+        <!--            app:layout_constraintBottom_toTopOf="@+id/phone"-->
+        <!--            android:id="@+id/address"-->
+        <!--            android:hint="Address"-->
+        <!--            android:inputType="text"-->
+        <!--            android:imeOptions="actionNext"-->
+        <!--            android:layout_marginLeft="32dp"-->
+        <!--            android:layout_marginRight="32dp"-->
+        <!--            android:padding="6dp"-->
+        <!--            android:background="@drawable/rect_login_field_bg_green"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:gravity="center|left"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="40dp"/>-->
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="24dp"
+            android:layout_weight="1"
+            android:maxLength="10"
+            android:fontFamily="@font/poppins_medium"
+            android:background="@drawable/rect_login_field_bg_green"
+            android:gravity="center|left"
+            android:hint="Phone"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:padding="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+
+        <TextView
+            android:id="@+id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/black_button_bg_green"
+            android:gravity="center"
+            android:padding="4dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/join_now"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/ll_ref"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <CheckBox
+            android:id="@+id/cbRef"
+            android:layout_marginTop="18dp"
+            android:text="I have a Reference Id"
+            android:textSize="16dp"
+            android:drawablePadding="7dp"
+            app:layout_constraintStart_toStartOf="@+id/phone"
+            app:layout_constraintTop_toBottomOf="@+id/phone"
+            app:layout_constraintEnd_toEndOf="@+id/phone"
+            android:layout_width="0dp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_ref"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="@+id/phone"
+            app:layout_constraintTop_toBottomOf="@+id/cbRef"
+            app:layout_constraintEnd_toEndOf="@+id/phone"
+            android:gravity="center">
+
+
+
+            <EditText
+                android:id="@+id/refId"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.2"
+                android:background="@drawable/rect_login_field_bg_green"
+                android:gravity="center|left"
+                android:hint="Reference Id"
+                android:paddingLeft="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:imeOptions="actionNext"
+                android:inputType="text"/>
+
+            <TextView
+                android:id="@+id/btn_chk_ref"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/black_button_bg_green"
+                android:gravity="center"
+                android:layout_weight=".5"
+                android:text="Verify"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/colorWhite"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/tvClickToHere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Already joined? "
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/cart_icon_color"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toStartOf="@+id/login"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signup" />
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/join_login2"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/darkGreen"
+            app:layout_constraintBottom_toBottomOf="@+id/tvClickToHere"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvClickToHere"
+            app:layout_constraintTop_toTopOf="@+id/tvClickToHere" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/join_new"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/black_button_bg_green"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:gravity="center"
+            android:tag="1"
+            android:textSize="16dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:text="@string/join_new"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="@+id/login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/login"
+            app:layout_constraintTop_toTopOf="@+id/login" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

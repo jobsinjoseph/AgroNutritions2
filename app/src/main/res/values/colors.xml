@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#194105</color>
+    <color name="colorPrimaryDark"> #203118</color>
+    <color name="colorAccent">#9c8d17</color>
+
+    <color name="colorAccent1">#414d53</color>
+
+<color name="bottom_menu_color">#738c16</color>
+<color name="darkGreen">#194105</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhiteCream">#FFFDD0</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorOffWhite">#F1EEEE</color>
+    <color name="colorOffBlack">#656565</color>
+    <color name="colorRed">#E44141</color>
+    <color name="categoryHighlightColor">#F68D1E</color>
+    <color name="colorGrey">#CAC4C4</color>
+    <color name="colorGreyDisabled">#9A9797</color>
+    <color name="colorGreyDark">#8E8C8C</color>
+    <color name="Transparent">#80FFFFFF</color>
+    <color name="TransparentFull">#00000000</color>
+    <color name="TransparentWhite">#00FFFFFF</color>
+    <color name="colorGreyBg">#EAE7E7</color>
+    <color name="droidGreen">#52BA6F</color>
+    <color name="highlight">#4D87C6</color>
+    <color name="transparent_black">#99000000</color>
+    <color name="cart_icon_color">#bf9926</color>
+    <color name="apply_now">#9c8d17</color>
+    <color name="divider_color">#c0c0c0</color>
+    <color name="check_out_btn_color">#bea21c</color>
+
+    <color name="colorTransparent">#00000000</color>
+    <color name="transparent_33">#33000000</color>
+
+    <color name="warmWhite">#f3e7d3</color>
+    <color name="warmWhites">#FDF4DC</color>
+
+</resources>

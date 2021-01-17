@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="420dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="10dp"
+    app:contentPadding="5dp"
+    android:elevation="10dp"
+    android:layout_gravity="center">
+    <com.makeramen.roundedimageview.RoundedImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:riv_corner_radius="10dip"
+        app:riv_border_width="1dip"
+        app:riv_border_color="#333333"
+        app:riv_mutate_background="true"
+        app:riv_tile_mode="repeat"
+        app:riv_oval="false"
+        android:id="@+id/pimg"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="ContentDescription" />
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/rect_curved_corner_border_transparent_filled"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPdtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:text="Organic fertilizers"
+                android:textColor="@color/colorWhite"
+                android:padding="5dp"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:padding="2dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/pdtPrice"
+                    android:textSize="14dp"
+                    android:textColor="@color/colorWhite"
+                    android:text="Rs. 00"
+                    android:padding="5dp"
+                    android:layout_weight="1.7"
+                    android:gravity="center|left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:visibility="visible"
+                    android:id="@+id/addBtn"
+                    android:gravity="center"
+                    android:layout_gravity="center|right"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:background="@drawable/cart_yellow"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+
+                <LinearLayout
+                    android:id="@+id/qtyLay"
+                    android:visibility="gone"
+                    android:weightSum="3"
+                    android:gravity="center|left"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/qtyRemove"
+                        android:gravity="center"
+                        android:background="@drawable/remove_btn"
+                        android:textSize="14dp"
+                        android:textColor="@color/colorWhite"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"/>
+
+                    <TextView
+                        android:id="@+id/qty"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:textColor="@color/colorOffBlack"
+                        android:text="1"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"/>
+
+                    <ImageButton
+                        android:id="@+id/qtyAdd"
+                        android:gravity="center"
+                        android:background="@drawable/add_btn"
+                        android:textSize="14dp"
+                        android:textColor="@color/colorWhite"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

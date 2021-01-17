@@ -1,0 +1,48 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/categoryHighlightColor</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ToolbarEspyApp" parent="AppTheme">
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textColorPrimary">@color/colorOffBlack</item>
+        <item name="android:textColorSecondary">@color/colorOffBlack</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="custom_ui_dialogue" parent="android:Theme.Holo.Dialog">
+        <item name="android:windowBackground">@color/TransparentFull</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="PopUpMenuDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/popupDialogAnimation</item>
+    </style>
+
+    <style name="popupDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item></style>
+
+    <style name="TextAppearance44">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/rect_curved_corner_border_white_filled_cart</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+</resources>

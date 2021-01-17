@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/mainLay"
+        android:background="@drawable/black_button_bg_green"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+    android:orientation="vertical"
+    android:layout_marginTop="12dp"
+    android:padding="16dp"
+    android:background="@drawable/rect_curved_corner_border_white_filled_cart"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/bank_holder"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/colorBlack"
+        android:textSize="16dp"
+        android:text="--"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_marginTop="3dp"
+        android:background="@color/colorGrey"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="16dp"
+            android:gravity="center|left"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="Account Number"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/bank_account_number"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/colorBlack"
+            android:textSize="16dp"
+            android:text="--"
+            android:gravity="center|left"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="16dp"
+            android:gravity="center|left"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="Bank Name"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/bank_name"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/colorBlack"
+            android:textSize="16dp"
+            android:text="--"
+            android:gravity="center|left"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="16dp"
+                android:gravity="center|left"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="Branch Name"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/bank_branch"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:gravity="center|left"
+                android:layout_weight="1"
+                android:text="--"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="16dp"
+                android:gravity="center|left"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="IFSC"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/bank_ifsc"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:text="--"
+                android:gravity="center|left"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="16dp"
+                android:gravity="center|left"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="Customer Id"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/customer_id"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:gravity="center|left"
+                android:layout_weight="1"
+                android:text="--"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+</LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

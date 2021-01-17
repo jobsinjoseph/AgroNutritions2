@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="240dp"
+    android:layout_height="320dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="10dp"
+    app:contentPadding="5dp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="0dp"
+    android:layout_gravity="center">
+    <com.makeramen.roundedimageview.RoundedImageView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/catImg"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    app:riv_corner_radius="10dip"
+    app:riv_border_width="1dip"
+    app:riv_border_color="#333333"
+    app:riv_mutate_background="true"
+    app:riv_tile_mode="repeat"
+    app:riv_oval="false"
+        tools:ignore="ContentDescription" />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="280dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/catName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Organic fertilizers"
+            android:textColor="#FFFFFF"
+            android:padding="5dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>
+</androidx.cardview.widget.CardView>

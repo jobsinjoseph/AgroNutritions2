@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cartMainLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/summaryBar"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cartItemsList"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <LinearLayout
+                    android:padding="5dp"
+
+                    android:orientation="vertical"
+                    android:id="@+id/calcLay"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cartItemsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:gravity="center|left"
+                            android:layout_weight="1"
+                            android:textSize="12dp"
+                            android:textColor="@color/colorOffBlack"
+                            android:text="Item Total"
+                            android:layout_width="0dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:gravity="center|right"
+                            android:id="@+id/itemTotal"
+                            android:layout_weight="1"
+                            android:textSize="12dp"
+                            android:textColor="@color/colorOffBlack"
+                            android:text="Rs. 00"
+                            android:layout_width="0dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="3dp"
+                        android:weightSum="2"
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:gravity="center|left"
+                            android:layout_weight="1"
+                            android:textSize="12dp"
+                            android:textColor="@color/colorOffBlack"
+                            android:text="Taxes &amp; charges"
+                            android:layout_width="0dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:gravity="center|right"
+                            android:id="@+id/tax"
+                            android:layout_weight="1"
+                            android:textSize="12dp"
+                            android:textColor="@color/colorOffBlack"
+                            android:text="Rs. 00"
+                            android:layout_width="0dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="15dp"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:gravity="center|left"
+                            android:layout_weight="1"
+                            android:textSize="14dp"
+                            android:textColor="@color/colorWhite"
+                            android:text="Have a promo code?"
+                            android:layout_width="0dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:gravity="center|right"
+                            android:layout_weight="1"
+                            android:textSize="14dp"
+                            android:textColor="@color/apply_now"
+                            android:text="Apply Now"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/colorGreyDisabled"/>
+                    //////////
+                    <LinearLayout
+                        android:layout_marginTop="15dp"
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:gravity="center|left"
+                            android:layout_weight="1"
+                            android:textSize="14dp"
+                            android:textColor="@color/colorWhite"
+                            android:text="Grand Total"
+                            android:layout_width="0dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/tv_cart_item_count"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:textSize="14dp"
+                            android:textColor="@color/colorWhite"
+                            android:text="2 items"
+                            android:layout_width="0dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:gravity="center|right"
+                            android:id="@+id/grandTotal"
+                            android:layout_weight="1"
+                            android:textSize="14dp"
+                            android:textColor="@color/colorWhite"
+                            android:text="Rs. 00"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/colorGreyDisabled"/>
+
+                    //checkout btn
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/tv_chk_out"
+                        android:layout_weight="1"
+                        android:textSize="17dp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/colorWhite"
+                        android:text="CONTINUE SHOPPING"
+                        android:background="@drawable/rect_curved_corner_border_checkout_filled"
+                        android:padding="7dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/addressLay"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/calcLay"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/promptAddress"
+                        android:textColor="@color/colorOffBlack"
+                        android:textSize="14dp"
+                        android:text="Shipping Address"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:padding="3dp"
+                        android:background="@drawable/remarks_et_bg"
+                        android:gravity="top|left"
+                        android:inputType="textMultiLine"
+                        android:layout_marginTop="3dp"
+                        android:lines="4"
+                        android:maxLines="4"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_below="@id/promptAddress"
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="96dp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/locationLay"
+                    android:background="@color/colorWhite"
+                    app:layout_constraintTop_toBottomOf="@+id/addressLay"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:background="@drawable/static_map"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:src="@drawable/ic_agro_logo1"
+                            android:id="@+id/mapIv"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:padding="4dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1.7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center|left"
+                            android:textColor="@color/colorOffBlack"
+                            android:textSize="15dp"
+                            android:text="Delivery At"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="4dp"
+                            android:gravity="center|left"
+                            android:id="@+id/locationSub"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="15dp"
+                            android:text="Select Pin code"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/editLay"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:src="@drawable/edit"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/locationLay"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/promptRemarks"
+                        android:textColor="@color/colorOffBlack"
+                        android:textSize="14dp"
+                        android:text="Remarks"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:padding="3dp"
+                        android:background="@drawable/remarks_et_bg"
+                        android:gravity="top|left"
+                        android:inputType="textMultiLine"
+                        android:layout_marginTop="3dp"
+                        android:layout_below="@id/promptRemarks"
+                        android:id="@+id/remarks"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"/>
+
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/summaryBar"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_marginBottom="3dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center"
+                android:background="@color/highlight"
+                android:orientation="vertical"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/delivery_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/payModeLay"
+                    android:padding="3dp"
+                    android:gravity="center|left"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:gravity="center|left"
+                        android:drawableRight="@drawable/up_arrow"
+                        android:drawablePadding="5dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp"
+                        android:text="PAY USING"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:id="@+id/payMode"
+                        android:gravity="center|left"
+                        android:drawablePadding="5dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp"
+                        android:text="Cash On Delivery"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:paddingRight="2dp"
+                    android:gravity="center|right"
+                    android:orientation="vertical"
+                    android:layout_weight="1.3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:clickable="true"
+                        android:id="@+id/submit"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:background="@drawable/black_button_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/dispPrice"
+                            android:gravity="center|left"
+                            android:layout_marginLeft="5dp"
+                            android:text="Rs. 00"
+                            android:textColor="@color/colorOffWhite"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_weight="0.8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:gravity="center|right"
+                            android:layout_marginRight="9dp"
+                            android:drawablePadding="7dp"
+                            android:drawableRight="@drawable/arrow_right"
+                            android:text="Place Order"
+                            android:textSize="16dp"
+                            android:textColor="@color/colorOffWhite"
+                            android:textAllCaps="false"
+                            android:layout_weight="1.2"
+                            android:layout_width="0dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        android:id="@+id/bottom_sheet_cart"
+        android:background="@android:color/white"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+        <TextView
+            android:padding="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:textSize="14dp"
+            android:fontFamily="@font/poppins_regular"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:text="Select Payment Mode"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/payModeList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="7dp" />
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,73 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "f24b91918e203515d4619d001ca3e288",
+    "entities": [
+      {
+        "tableName": "OrderProductData",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`pdt_id` TEXT NOT NULL, `pdt_name` TEXT NOT NULL, `pdt_cat_id` TEXT NOT NULL, `pdt_price` TEXT NOT NULL, `pdt_qty` TEXT NOT NULL, `pdt_total_price` TEXT NOT NULL, PRIMARY KEY(`pdt_id`))",
+        "fields": [
+          {
+            "fieldPath": "pdt_id",
+            "columnName": "pdt_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pdt_name",
+            "columnName": "pdt_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pdt_cat_id",
+            "columnName": "pdt_cat_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pdt_price",
+            "columnName": "pdt_price",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pdt_qty",
+            "columnName": "pdt_qty",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pdt_total_price",
+            "columnName": "pdt_total_price",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "pdt_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_OrderProductData_pdt_id",
+            "unique": true,
+            "columnNames": [
+              "pdt_id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_OrderProductData_pdt_id` ON `${TABLE_NAME}` (`pdt_id`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f24b91918e203515d4619d001ca3e288')"
+    ]
+  }
+}
